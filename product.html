@@ -3,124 +3,212 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Explore delicious desserts from around the world — from baklava to tiramisu, mochi to churros. Discover the sweet side of every culture.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-    <link rel="icon" href="ikon4.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <title>Products | Dessert Dream</title>
+    <link rel="icon" href="img/ikon.png" type="image/x-icon">
     <style>
-        body {
-            background-color: #e9ecef;
-            background-repeat: repeat;
-            text-align: center;
+        header {
+            position: fixed;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+            background-color: #222222;
+            z-index: 100;
         }
 
-        .jumbotron {
-            background-color: #434242;
-            height: 30px;
+        #icon-position {
+            display: flex;
+            align-items: center;
+        }
+
+        #nav-icon {
+            width: 40px;
+        }
+
+        #nav-bar {
+            font-size: 30px;
+            gap: 40px;
+            display: flex;
+            margin-right: 90px;
         }
 
         a {
-            font-size: 20px;
+            color: white;
+            text-decoration: none;
         }
 
-        .card-group {
-            display: inline-flex;
+        body {
+            background-color: #E9ECEF;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
-        .card {
-            margin: 10px;
+        main {
+            margin-top: 160px;
+            text-align: center;
+            padding-bottom: 100px;
         }
 
-        .container {
-            display: flex;
-            justify-content: space-around;
+        h1 {
+            font-size: 45px;
+            color: #4B2E2E;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h2 {
+            color: #4B2E2E;
+            margin: 15px 0 10px;
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .product-card a {
+            background-color: #4B2E2E;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .product-card a:hover {
+            background-color: #381F1F;
+        }
+
+        footer {
+            background-color: #222222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 25px;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 18px;
+            margin: 0;
         }
     </style>
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid">
-            <a href="homepage.html"><button>HOMEPAGE</button></a>
-            <a href="contact.html"><button>CONTACT</button></a>
-            <a href="product.html"><button>PRODUCT</button></a>
-        </div>
-    </div>
-    <div class="container">
-        <h3>FRENCH DESSERT</h3>
-        <div class="row text-center mt-4">
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <img src="sufle.jpeg" class="img-fluid" style="height: 200px;" alt="sufle">
-                        <h3 class="text-success">SOUFFLE</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet. </p>
-                        <button class="btn btn-dark px-4 py-0">100</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <img src="mousse.jpg" class="img-fluid" style="height: 200px;" alt="mousse">
-                        <h3 class="text-success">MOUSSE</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet. </p>
-                        <button class="btn btn-dark px-4 py-0">100</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <img src="krem-karamel.jpg" class="img-fluid" style="height: 200px;" alt="krem-karamel">
-                        <h3 class="text-success">CREAM CARAMEL</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet. </p>
-                        <button class="btn btn-dark px-4 py-0">100</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <br>
+    <header>
+        <a id="icon-position" href="index.html" rel="noopener noreferrer">
+            <img id="nav-icon" src="img/cake.png" alt="cupcake">
+        </a>
+        <nav id="nav-bar">
+            <a href="index.html" rel="noopener noreferrer">Home</a>
+            <a href="product.html" rel="noopener noreferrer">Products</a>
+            <a href="about-us.html" rel="noopener noreferrer">About Us</a>
+            <a href="contact.html" rel="noopener noreferrer">Contact</a>
+        </nav>
+    </header>
 
-    <div class="container">
-        <h3>TURKISH DESSERT</h3>
-        <div class="row text-center mt-4">
-            <div class="col-md-4 ">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <img class="img-fluid" src="künefe.jpg" style="height: 200px;" alt="künefe">
-                        <h3 class="text-success">KÜNEFE</h3>
-                        <p class="btn btn-dark px-4 py-0">100 TL</p>
-                    </div>
-                </div>
+    <main>
+        <h1>Our Desserts</h1>
+        <section class="product-grid">
+            <div class="product-card">
+                <img src="img/baklava.jpg" alt="Baklava">
+                <h2>Baklava</h2>
+                <p>A golden, crispy Turkish dessert layered with pistachios and syrup — a timeless treat of sweetness.
+                </p>
+                <a href="#">Learn More</a>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <img class="img-fluid" src="kalburabasti.jpg" style="height: 200px;" alt="kalburabasti">
-                        <h3 class="text-success">KALBURABASTI</h3>
-                        <p class="btn btn-dark px-4 py-0">100 TL</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <img class="img-fluid" src="soğuk-baklava.jpg" style="height: 200px;" alt="soğuk baklava ">
-                        <h3 class="text-success">SOĞUK BAKLAVA</h3>
-                        <p class="btn btn-dark px-4 py-0">100 TL</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
+            <div class="product-card">
+                <img src="img/tiramisu.jpg" alt="Tiramisu">
+                <h2>Tiramisu</h2>
+                <p>An Italian classic with layers of espresso-soaked biscuits and creamy mascarpone perfection.</p>
+                <a href="#">Learn More</a>
+            </div>
 
+            <div class="product-card">
+                <img src="img/mochi.jpg" alt="Mochi">
+                <h2>Mochi</h2>
+                <p>Soft, chewy Japanese rice cakes with a sweet heart — simplicity and texture in one bite.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="product-card">
+                <img src="img/macarons.jpeg" alt="Macarons">
+                <h2>Macarons</h2>
+                <p>Colorful French delights with delicate shells and creamy fillings that melt in your mouth.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="product-card">
+                <img src="img/churros.jpg" alt="Churros">
+                <h2>Churros</h2>
+                <p>Spanish fried dough sticks, crunchy outside and soft inside — best enjoyed with hot chocolate.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="product-card">
+                <img src="img/cheesecake.jpg" alt="Cheesecake">
+                <h2>Cheesecake</h2>
+                <p>Rich and creamy dessert with a crumbly base — smooth, satisfying, and endlessly loved.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="product-card">
+                <img src="img/creme-caramel.jpg" alt="Crème Caramel">
+                <h2>Crème Caramel</h2>
+                <p>A smooth custard dessert topped with a delicate layer of caramel — classic, sweet, and elegant.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="product-card">
+                <img src="img/trilece.jpeg" alt="Trileçe">
+                <h2>Trileçe</h2>
+                <p>A creamy Balkan dessert soaked in three kinds of milk, soft, sweet, and utterly delightful.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 World of Desserts | All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
