@@ -3,93 +3,172 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Get in touch with Dessert Dream. We'd love to hear your thoughts, feedback, or partnership inquiries. Contact us to connect with our sweet world.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="icon" href="ikon4.png" type="image/x-icon">
+    <title>Contact Us | Dessert Dream</title>
+    <link rel="icon" href="img/ikon.png" type="image/x-icon">
     <style>
-        body {
-            background-color: #e9ecef;
-            background-repeat: repeat;
-            text-align: center;
+        /* Navbar */
+        header {
+            position: fixed;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+            background-color: #222222;
         }
 
-        form {
-            border-style: solid;
-            border-width: 5px;
-            background-color: #fdfdbd;
-            width: 600px;
-            height: 300px;
+        #icon-position {
+            display: flex;
+            align-items: center;
+        }
+
+        #nav-icon {
+            width: 40px;
+        }
+
+        #nav-bar {
+            font-size: 30px;
+            gap: 40px;
+            display: flex;
+            margin-right: 90px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Body */
+        body {
+            background-color: #E9ECEF;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
             text-align: center;
-            margin-top: 50px;
-            margin-inline-start: 300px;
+            margin-top: 160px;
+            margin-bottom: 100px;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: #4B2E2E;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            max-width: 700px;
+            margin: 10px auto 40px;
+            line-height: 1.6;
+        }
+
+        /* Contact form */
+        form {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #4B2E2E;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        button {
+            background-color: #4B2E2E;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #381F1F;
+        }
+
+        footer {
+            background-color: #222222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+        }
+
+        footer p {
+            font-size: 18px;
+            margin: 0;
+            color: white;
         }
     </style>
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <a href="homepage.html"><button>Homepage</button></a>
-            <a href="contact.html"><button>contact</button></a>
-            <a href="product.html"><button>product</button></a>
-        </div>
-    </div>
-    <!-- navbar end -->
-    <!-- content start -->
-    <section>
-        <form action="home-page.html" method="post">
-            <table style="width:100%;max-width:550px;border:0;" cellpadding="8" cellspacing="0">
-                <tr>
-                    <td>
-                        <label for="Name">Name*:</label>
-                    </td>
-                    <td>
-                        <input name="Name" type="text" maxlength="20" style="width:100%;max-width:250px;" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="PhoneNumber">Phone number:</label>
-                    </td>
-                    <td>
-                        <input name="PhoneNumber" type="text" maxlength="25" style="width:100%;max-width:250px;" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="FromEmailAddress">Email address*:</label>
-                    </td>
-                    <td>
-                        <input name="FromEmailAddress" type="text" maxlength="90" style="width:100%;max-width:250px;" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="Comments">Comments*:</label>
-                    </td>
-                    <td>
-                        <textarea name="Comments" rows="7" cols="40" style="width:100%;max-width:350px;"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        * - required fields
-                    </td>
-                    <td>
-                        <div style="float:left"><a href="https://www.gmail.com" title="form to email"> go to e-mail</a>
-                        </div>
-                        <input type="submit" value="submit">
-                        <input type="reset" value="clean">
+    <header>
+        <a id="icon-position" href="index.html" rel="noopener noreferrer">
+            <img id="nav-icon" src="img/cake.png" alt="cupcake">
+        </a>
+        <nav id="nav-bar">
+            <a href="index.html" rel="noopener noreferrer">Home</a>
+            <a href="product.html" rel="noopener noreferrer">Products</a>
+            <a href="about-us.html" rel="noopener noreferrer">About Us</a>
+            <a href="contact.html" rel="noopener noreferrer">Contact</a>
+        </nav>
+    </header>
 
-                    </td>
-                </tr>
-            </table>
-            <h1> </h1>
-            <p> </p>
-    </section>
-    <!-- content end -->
+    <main>
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you! Whether you have a question, feedback, or collaboration idea — just send us a
+            message and we’ll get back to you soon.</p>
+
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 World of Desserts | All rights reserved.</p>
+    </footer>
 </body>
-
 
 </html>
